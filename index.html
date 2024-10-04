@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href="style.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container">
+        <h2> Currency Converter</h2>
+        <form>
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input value="500" type="text"/>
+            </div>
+            <div class="dropdown">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select=container">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select name="from">
+                            <option value="INR" selected>INR</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ic">
+                <svg class="icone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+                </div>
+                  
+                      
+                
+                
+                
+                <div class="To">
+                    <p>To</p>
+                    <div class="select=container">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select name="To">
+                            <option value="INR" selected>INR</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+            <div class="output-column">
+                <p>Current Value: <span id="output"></span></p>
+            </div>
+            <div class="msg"> 
+                <p> <span id="Rate"></span></p>
+            </div>
+            <button>Get Exchange Rates</button>
+
+        </form>
+    </div>
+
+    <script src="codes.js"></script>
+   <script src="app.js"></script>
+   
+</body>
+</html>
