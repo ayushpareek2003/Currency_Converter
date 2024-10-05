@@ -58,6 +58,7 @@ butt.addEventListener("click",async (evt)=>{
     if(!isNumeric(input.value)){
         alert("Enter a numeric Value")
     }
+    else{
     let rate=dat[fom.value.toLowerCase()][to.value.toLowerCase()];
     let ret_value=(rate*input.value).toFixed(2);
 
@@ -68,7 +69,7 @@ butt.addEventListener("click",async (evt)=>{
     
     show_value.innerHTML=ret_value + ' '+ to.value;
     i_rate.innerHTML="1 "+fom.value+" = "+ rate +" "+to.value
-
+    }
 
 }
 )
