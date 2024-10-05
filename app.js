@@ -34,6 +34,10 @@ const updateflag=(newe)=>{
     let im=newe.parentElement.querySelector("img");
     im.src=newsrc;
 }
+function isNumeric(input) {
+    // Check if the input is a string that contains only digits (with an optional negative sign)
+    return /^\d+(\.\d+)?$/.test(input);
+}
 
 butt.addEventListener("click",async (evt)=>{
 
@@ -51,12 +55,17 @@ butt.addEventListener("click",async (evt)=>{
     let dat=await pre.json()
     // console.log(dat[fom.value.toLowerCase()][to.value.toLowerCase()]);
     
+    if(!isNumeric(input.value)){
+        alert("Enter a numeric Value")
+    }
     let rate=dat[fom.value.toLowerCase()][to.value.toLowerCase()];
     let ret_value=(rate*input.value).toFixed(2);
+
 
     
     
     // console.log(input.value);
+    
     show_value.innerHTML=ret_value + ' '+ to.value;
     i_rate.innerHTML="1 "+fom.value+" = "+ rate +" "+to.value
 
